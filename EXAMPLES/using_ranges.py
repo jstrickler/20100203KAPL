@@ -24,3 +24,14 @@ print("range(10, 0, -1): ", end=' ')
 for x in range(10, 0, -1):  # <5>
     print(x, end=' ')
 print()
+
+print("range(5, -6, -1): ", end=' ')
+for x in range(5, -6, -1):  # <5>
+    print(x, end=' ')
+print()
+
+for _ in range(5):
+    print("Python!")
+
+print(list(range(1, 11)))
+print(list(range(10)))
