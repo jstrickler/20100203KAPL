@@ -3,7 +3,9 @@
 users_by_shell = {}
 with open("../DATA/passwd") as passwd_in:
     for line in passwd_in:
-        (_, _, _, _, _, _, shell) = line.rstrip('\n\r').split(":")
+        shell = line.rstrip().split(":")[0]
+        # or
+        # *_, shell = line.rstrip().split(":")
         if shell == "":
             shell = "NONE"
 
