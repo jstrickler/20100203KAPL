@@ -1,0 +1,71 @@
+
+   pet    "my pet rhino"  "the carpet king"
+          "I like petunias"  "Capetown"
+           NOT "pretty sure"
+
+   p.t    "potato chip"  "carpetbagger"
+          "Keep to the right"
+
+   p[aeiou]t
+
+   [0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9]
+
+   p[a-z]t
+
+   p[A-Za-z0-9_]t   p\wt   p\Wt  p[^A-Za-z0-9_]t
+   p[0-9]t          p\dt   p\Dt  p[^0-9]t
+   p[ \t\n\r\f]t    p\st   p\St  p[^ \t\n\r\f]t
+
+   \d\d\d-\d\d-\d\d\d\d
+
+   [^^]
+
+   \^  \. \[  \\
+
+   p[^aeiou]t
+
+   #  . [abc]  [^abc]  \d \s \w \D \S \W
+
+
+   pat
+
+   * 0 or more       {n}      {0,}
+   + 1 or more       {n,}     {1,}
+   ? 0 or 1          {n,m}    {0,1}
+
+   pa*t    pat paaat pt paaaaaaaaaaat
+
+   p[aeiou]+t   pat peat poooooooot    NOT pt
+
+   [a-z]{1,3}\d{2,7}   a1  abc9392939
+
+   [A-Z]\d{2,3}
+
+   \d{3}-\d{2}-\d{4}
+
+   (\+\d{1,3}-)?(\d{2,}-)+\d+
+
+   foo|bar(blah|baz)|spam|toast
+
+    b1|b2
+
+    ^foo    foo$
+    ^foo$
+
+    [^fo]
+
+    ^fo
+
+    [^foo]
+
+    \bfoo foo\b   \bfoo\b
+
+
+
+
+
+
+
+    
+
+
