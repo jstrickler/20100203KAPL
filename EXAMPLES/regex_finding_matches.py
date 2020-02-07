@@ -10,6 +10,10 @@ voluptate velit esse cillum dolore U901 eu fugiat nulla pariatur.
 Excepteur sint occaecat A110 cupidatat non proident, sunt in H332 culpa qui 
 officia deserunt Y45 mollit anim id est laborum"""
 
+#           group0
+#           (              )
+#           group1  group2
+#           (     )(       )
 pattern = r'[A-Z]\d{2,3}'  # <1>
 
 if re.search(pattern, s):  # <2>
@@ -19,11 +23,12 @@ print()
 m = re.search(pattern, s)  # <3>
 print(m)
 if m:
-    print("Found:", m.group(0))  # <4>
+    print("Found:", m.group())  # <4>  or m.group()
+    print(m.start(), m.end())
 print()
 
 for m in re.finditer(pattern, s):  # <5>
-    print(m.group())
+    print(m.group(), m.start(), m.end())
 print()
 
 matches = re.findall(pattern, s)  # <6>

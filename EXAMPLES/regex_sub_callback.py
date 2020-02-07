@@ -20,6 +20,7 @@ def update_code(m):  # <1>
     letter = m.group('letter').upper()
     number = int(m.group('number'))
     return '{}{:04d}'.format(letter, number)  # <2>
+    # return '*** ' + m.group() + ' ***'
 
 
 s2 = rx_code.sub(update_code, s)  # <3>
