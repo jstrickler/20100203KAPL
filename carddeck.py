@@ -51,3 +51,6 @@ class CardDeck:
         tmp = type(self)(self.dealer_name)
         tmp._cards = self._cards + other._cards
         return tmp
+
+    def __len__(self):
+        return len(self._cards)
